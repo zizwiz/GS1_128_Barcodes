@@ -75,7 +75,7 @@ namespace BarcodeGenerator.Code128GS1
         #endregion
     }
 
-    public class Encoder
+    public class BarCodeEncoder
     {
         #region Constants
 
