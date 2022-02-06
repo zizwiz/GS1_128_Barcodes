@@ -10,13 +10,17 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using BarcodeGenerator.Code128GS1;
 using GS1_128_Barcodes.Properties;
-using Encoder = BarcodeGenerator.Code128GS1.Encoder;
+
+
+
+
+// check the number is in legal set to use
 
 namespace GS1_128_Barcodes
 {
     public partial class Form1 : Form
     {
-        //create and instance of PrivateFoneCollection
+        //create and instance of PrivateFontCollection
         PrivateFontCollection pfc = new PrivateFontCollection();
 
         public Form1()
@@ -55,7 +59,8 @@ namespace GS1_128_Barcodes
             }
             else
             {
-                MessageBox.Show("You must enter a Bar Width number", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You must enter a Bar Width number", "No Data", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
@@ -63,7 +68,7 @@ namespace GS1_128_Barcodes
         {
             if (txtbx_data_input.Text != "")
             {
-                Encoder c128 = new Encoder();
+                BarCodeEncoder c128 = new BarCodeEncoder();
                 BarcodeImage barcodeImage = new BarcodeImage();
 
 
@@ -127,6 +132,7 @@ namespace GS1_128_Barcodes
                 MessageBox.Show("Bar Width cannot be less than 1", "Bar Size too Small", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+
             txtbx_bar_width.Text = BarSize.ToString();
             GenerateBarCode(BarSize);
         }
@@ -134,7 +140,7 @@ namespace GS1_128_Barcodes
         private void Form1_Load(object sender, EventArgs e)
         {
             //We add the font file to resources so we know it will be on the computer
-            //we we load teh form we need ot get hold of the font file and this is how I do it.
+            //we we load the form we need ot get hold of the font file and this is how I do it.
             // there are other ways to do it using unsafe code but I do it this way.
 
             //Write the byte array to a file in same directory as the exe we are running
@@ -142,6 +148,9 @@ namespace GS1_128_Barcodes
 
             //add the font file to our instance of PrivateFontCollection
             pfc.AddFontFile(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\OCRB_Regular.ttf");
+
+            fill_ai_test_data();
+            cmbobx_ai_test_data.SelectedIndex = 0;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -153,7 +162,7 @@ namespace GS1_128_Barcodes
         {
 
             //Work out where the Human readable will start so it is centered on BarCode
-            int _startPoint = (bmp1.Width - (int)Math.Round(sizeOfString.Width)) / 2;
+            int _startPoint = (bmp1.Width - (int) Math.Round(sizeOfString.Width)) / 2;
 
 
             //make it the width of the largest and the height of both combined
@@ -167,10 +176,11 @@ namespace GS1_128_Barcodes
                 g.DrawImage(bmp2, _startPoint, bmp1.Height);
                 g.DrawImage(bmp1, 0, 0);
             }
+
             return result;
         }
 
-        
+
         private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             using (var g = e.Graphics)
@@ -187,5 +197,63 @@ namespace GS1_128_Barcodes
                 }
             }
         }
+
+
+
+        private void btn_decipher_Click(object sender, EventArgs e)
+        {
+            rchtxtbx_output.Clear();
+
+            string _barCodeData = txtbx_data_input.Text;
+
+
+            if (CheckData.IsCharLegal(_barCodeData))
+            {
+
+                int[] data = new int[_barCodeData.Length];
+                int count = 0;
+
+
+                //find all instances of char (
+                for (int i = _barCodeData.IndexOf('('); i > -1; i = _barCodeData.IndexOf('(', i + 1))
+                {
+                    data[count] = i;
+                    count += 2;
+                }
+
+                count = 1;
+
+                //find all instances of char (
+                for (int i = _barCodeData.IndexOf(')'); i > -1; i = _barCodeData.IndexOf(')', i + 1))
+                {
+                    data[count] = i;
+                    count += 2;
+                }
+
+                data[count - 1] = _barCodeData.Length; //need value of end of string for calculations
+                Array.Resize(ref data, count);
+
+                //Go through the string and pull out AI and following information
+                for (int i = 0; i < data.Length - 1; i += 2)
+                {
+                    int a = data[i] + 1; // AI Start
+                    int b = data[i + 1] - a; // AI Length
+
+                    int c = data[i + 1] + 1; // Data Start
+                    int d = data[i + 2] - c; // Data end
+
+                    //  rchtxtbx_output.AppendText(_barCodeData.Substring(a, b) + "\r"); //AI
+                    //rchtxtbx_output.AppendText(_barCodeData.Substring(c, d) + "\r"); //Data
+
+                    DecipherData(_barCodeData.Substring(a, b), _barCodeData.Substring(c, d));
+                }
+            }
+            else
+            {
+                MessageBox.Show("Found a non-legal character\rCheck the barcode data is correct");
+            }
+        }
+
+       
     }
 }

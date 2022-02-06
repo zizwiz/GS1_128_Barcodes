@@ -49,8 +49,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checks\CheckDateTimes.cs" />
+    <Compile Include="Checks\checksums.cs" />
     <Compile Include="Code128GS1Engines\BarcodeImage.cs" />
     <Compile Include="Code128GS1Engines\Encoder.cs" />
+    <Compile Include="data\ai_test_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="decipher\AI_2\00.cs" />
+    <Compile Include="decipher\AI_2\01.cs" />
+    <Compile Include="decipher\AI_2\02.cs" />
+    <Compile Include="decipher\AI_2\10.cs" />
+    <Compile Include="decipher\AI_2\11.cs" />
+    <Compile Include="decipher\AI_2\12.cs" />
+    <Compile Include="decipher\AI_2\13.cs" />
+    <Compile Include="decipher\AI_2\15.cs" />
+    <Compile Include="decipher\AI_2\16.cs" />
+    <Compile Include="decipher\AI_2\17.cs" />
+    <Compile Include="decipher\AI_2\20.cs" />
+    <Compile Include="decipher\AI_2\21.cs" />
+    <Compile Include="decipher\AI_2\22.cs" />
+    <Compile Include="decipher\AI_3\235.cs" />
+    <Compile Include="decipher\AI_3\240.cs" />
+    <Compile Include="decipher\AI_3\241.cs" />
+    <Compile Include="decipher\AI_3\242.cs" />
+    <Compile Include="decipher\AI_3\243.cs" />
+    <Compile Include="decipher\AI_3\250.cs" />
+    <Compile Include="Checks\CheckData.cs" />
+    <Compile Include="decipher\AI_3\251.cs" />
+    <Compile Include="decipher\AI_3\253.cs" />
+    <Compile Include="decipher\decipher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="decipher\gs1_128_decipher.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
