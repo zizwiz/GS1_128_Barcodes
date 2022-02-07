@@ -69,6 +69,7 @@
     <Compile Include="decipher\AI_2\20.cs" />
     <Compile Include="decipher\AI_2\21.cs" />
     <Compile Include="decipher\AI_2\22.cs" />
+    <Compile Include="decipher\AI_2\30.cs" />
     <Compile Include="decipher\AI_3\235.cs" />
     <Compile Include="decipher\AI_3\240.cs" />
     <Compile Include="decipher\AI_3\241.cs" />
@@ -78,6 +79,12 @@
     <Compile Include="Checks\CheckData.cs" />
     <Compile Include="decipher\AI_3\251.cs" />
     <Compile Include="decipher\AI_3\253.cs" />
+    <Compile Include="decipher\AI_3\254.cs" />
+    <Compile Include="decipher\AI_3\255.cs" />
+    <Compile Include="decipher\AI_4\31nn.cs" />
+    <Compile Include="decipher\AI_4\32nn.cs" />
+    <Compile Include="decipher\AI_4\35nn.cs" />
+    <Compile Include="decipher\AI_4\36nn.cs" />
     <Compile Include="decipher\decipher.cs">
       <SubType>Form</SubType>
     </Compile>

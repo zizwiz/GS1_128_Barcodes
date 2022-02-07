@@ -219,10 +219,10 @@ namespace GS1_128_Barcodes
                 case "AI 243: PCN": txtbx_data_input.Text = "(243)AF45AHJU764NHGR82"; return;
                 case "AI 250: SECONDARY SERIAL": txtbx_data_input.Text = "(250)15qtGafa546348jgaVCDe20987"; return;
                 case "AI 251: REF. TO SOURCE": txtbx_data_input.Text = "(251)1tqUH637389dsmhhx66FEDDF132456"; return;
-                case "AI 253: GDTI": txtbx_data_input.Text = "(253)0123456789012"; return;
-                case "AI 254: GLN EXTENSION COMPONENT": txtbx_data_input.Text = ""; return;
-                case "AI 255: GCN": txtbx_data_input.Text = ""; return;
-                case "AI 30: VAR. COUNT": txtbx_data_input.Text = ""; return;
+                case "AI 253: GDTI": txtbx_data_input.Text = "(253)0123456789012ABC123QWASZX9"; return;
+                case "AI 254: GLN EXTENSION COMPONENT": txtbx_data_input.Text = "(254)A45rf3ujhgtLKJH654"; return;
+                case "AI 255: GCN": txtbx_data_input.Text = "(255)012345678901201234567"; return;
+                case "AI 30: VAR. COUNT": txtbx_data_input.Text = "(30)12345678"; return;
                 case "AI 310n: NET WEIGHT (kg)": txtbx_data_input.Text = "(310)2000400"; return;
                 case "AI 311n: LENGTH (m)": txtbx_data_input.Text = ""; return;
                 case "AI 312n: WIDTH (m)": txtbx_data_input.Text = ""; return;

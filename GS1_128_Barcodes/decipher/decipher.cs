@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace GS1_128_Barcodes
+﻿namespace GS1_128_Barcodes
 {
     public partial class Form1
     {
@@ -76,6 +69,18 @@ namespace GS1_128_Barcodes
                     break;
                 case "253": //GDTI
                     rchtxtbx_output.AppendText(AI_3.decipher_AI253(data) + "\r");
+                    break;
+                case "254": //GLN EXTENSION COMPONENT 
+                    rchtxtbx_output.AppendText(AI_3.decipher_AI254(data) + "\r");
+                    break;
+                case "255": //GCN 
+                    rchtxtbx_output.AppendText(AI_3.decipher_AI255(data) + "\r");
+                    break;
+                case "30": //GCN 
+                    rchtxtbx_output.AppendText(AI_2.decipher_AI30(data) + "\r");
+                    break;
+                case "31nn": //GCN 
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
                     break;
 
 
