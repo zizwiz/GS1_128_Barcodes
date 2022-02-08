@@ -223,7 +223,7 @@ namespace GS1_128_Barcodes
                 case "AI 254: GLN EXTENSION COMPONENT": txtbx_data_input.Text = "(254)A45rf3ujhgtLKJH654"; return;
                 case "AI 255: GCN": txtbx_data_input.Text = "(255)012345678901201234567"; return;
                 case "AI 30: VAR. COUNT": txtbx_data_input.Text = "(30)12345678"; return;
-                case "AI 310n: NET WEIGHT (kg)": txtbx_data_input.Text = "(310)2000400"; return;
+                case "AI 310n: NET WEIGHT (kg)": txtbx_data_input.Text = "(3102)000040"; return;
                 case "AI 311n: LENGTH (m)": txtbx_data_input.Text = ""; return;
                 case "AI 312n: WIDTH (m)": txtbx_data_input.Text = ""; return;
                 case "AI 313n: HEIGHT (m)": txtbx_data_input.Text = ""; return;

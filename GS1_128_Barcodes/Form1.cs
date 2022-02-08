@@ -205,6 +205,7 @@ namespace GS1_128_Barcodes
             rchtxtbx_output.Clear();
 
             string _barCodeData = txtbx_data_input.Text;
+            int _ai = 0;
 
 
             if (CheckData.IsCharLegal(_barCodeData))
@@ -242,10 +243,34 @@ namespace GS1_128_Barcodes
                     int c = data[i + 1] + 1; // Data Start
                     int d = data[i + 2] - c; // Data end
 
-                    //  rchtxtbx_output.AppendText(_barCodeData.Substring(a, b) + "\r"); //AI
-                    //rchtxtbx_output.AppendText(_barCodeData.Substring(c, d) + "\r"); //Data
+                    string ai = _barCodeData.Substring(a, b);
+                    string _data = _barCodeData.Substring(c, d);
+                    if (ai.Length>3) {_ai = int.Parse(ai.Substring(0, 3));} // for ai that are longer than 3 
 
-                    DecipherData(_barCodeData.Substring(a, b), _barCodeData.Substring(c, d));
+                    //Some ai use various sub-numbers and we include them all in the same class
+                    //here we send over all the data as some of it dictates the decimal point etc
+                    if ((_ai >= 310) && (_ai <= 316))
+                    {
+                        _data = ai + _data;
+                        ai = "31nn";
+                    }
+                    else if ((_ai >= 320) && (_ai <= 329))
+                    {
+                        _data = ai + _data;
+                        ai = "32nn";
+                    }
+                    else if (((_ai >= 350) && (_ai <= 352))||(_ai==356)||(_ai==357))
+                    {
+                        _data = ai + _data;
+                        ai = "35nn";
+                    }
+                    else if ((_ai >= 360) && (_ai <= 366))
+                    {
+                        _data = ai + _data;
+                        ai = "36nn";
+                    }
+
+                    DecipherData(ai,_data);
                 }
             }
             else

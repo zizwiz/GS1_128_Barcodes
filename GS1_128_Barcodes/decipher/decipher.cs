@@ -76,12 +76,22 @@
                 case "255": //GCN 
                     rchtxtbx_output.AppendText(AI_3.decipher_AI255(data) + "\r");
                     break;
-                case "30": //GCN 
+                case "30": //VAR. COUNT 
                     rchtxtbx_output.AppendText(AI_2.decipher_AI30(data) + "\r");
                     break;
-                case "31nn": //GCN 
+                case "31nn": //TRADE MEASURE
                     rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
                     break;
+                case "32nn": //TRADE MEASURE
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
+                    break;
+                case "35nn": //TRADE MEASURE
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
+                    break;
+                case "36nn": //TRADE MEASURE
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
+                    break;
+
 
 
 
