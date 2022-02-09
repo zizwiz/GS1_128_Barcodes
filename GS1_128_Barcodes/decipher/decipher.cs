@@ -83,13 +83,19 @@
                     rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
                     break;
                 case "32nn": //TRADE MEASURE
-                    rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI32nn(data) + "\r");
+                    break;
+                case "33nn": //LOGISTIC MEASURES
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI33nn(data) + "\r");
+                    break;
+                case "34nn": //LOGISTIC MEASURES
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI34nn(data) + "\r");
                     break;
                 case "35nn": //TRADE MEASURE
-                    rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI35nn(data) + "\r");
                     break;
                 case "36nn": //TRADE MEASURE
-                    rchtxtbx_output.AppendText(AI_4.decipher_AI31nn(data) + "\r");
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI36nn(data) + "\r");
                     break;
 
 

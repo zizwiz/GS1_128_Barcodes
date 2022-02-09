@@ -259,12 +259,22 @@ namespace GS1_128_Barcodes
                         _data = ai + _data;
                         ai = "32nn";
                     }
-                    else if (((_ai >= 350) && (_ai <= 352))||(_ai==356)||(_ai==357))
+                    else if ((_ai >= 330) && (_ai <= 336))
+                    {
+                        _data = ai + _data;
+                        ai = "33nn";
+                    }
+                    else if ((_ai >= 340) && (_ai <= 349))
+                    {
+                        _data = ai + _data;
+                        ai = "34nn";
+                    }
+                    else if ((_ai >= 350) && (_ai <= 357))
                     {
                         _data = ai + _data;
                         ai = "35nn";
                     }
-                    else if ((_ai >= 360) && (_ai <= 366))
+                    else if ((_ai >= 360) && (_ai <= 369))
                     {
                         _data = ai + _data;
                         ai = "36nn";

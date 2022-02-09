@@ -2,7 +2,7 @@
 {
     public partial class AI_4
     {
-        public static string decipher_AI32nn(string data)
+        public static string decipher_AI34nn(string data)
         {
             string explanation = "";
             string units = "";
@@ -26,44 +26,44 @@
 
                 switch (ai)
                 {
-                    case "320":
-                        explanation = "Net weight in Pounds";
+                    case "340":
+                        explanation = "Logistic weight in pounds";
                         units = "lb";
                         break;
-                    case "321":
-                        explanation = "Length or first dimension in Inches";
+                    case "341":
+                        explanation = "Length or first dimension in inches";
                         units = "in";
                         break;
-                    case "322":
-                        explanation = "Length or first dimension in Feet";
+                    case "342":
+                        explanation = "Length or first dimension in feet";
                         units = "ft";
                         break;
-                    case "323":
-                        explanation = "Length or first dimension in Yards";
+                    case "343":
+                        explanation = "Length or first dimension in yards";
                         units = "yd";
                         break;
-                    case "324":
-                        explanation = "Width, diameter, or second dimension in Inches";
+                    case "344":
+                        explanation = "Width, diameter, or second dimension in inches";
                         units = "in";
                         break;
-                    case "325":
-                        explanation = "Width, diameter, or second dimension in Feet";
+                    case "345":
+                        explanation = "Width, diameter, or second dimension in feet";
                         units = "ft";
                         break;
-                    case "326":
-                        explanation = "Width, diameter, or second dimension in Yards";
+                    case "346":
+                        explanation = "Width, diameter, or second dimension in yards";
                         units = "yd";
                         break;
-                    case "327":
-                        explanation = "Depth, thickness, height, or third dimension in Inches";
+                    case "347":
+                        explanation = "Depth, thickness, height, or third dimension in inches";
                         units = "in";
                         break;
-                    case "328":
-                        explanation = "Depth, thickness, height, or third dimension in Feet";
+                    case "348":
+                        explanation = "Depth, thickness, height, or third dimension in feet";
                         units = "ft";
                         break;
-                    case "329":
-                        explanation = "Depth, thickness, height, or third dimension in Yards";
+                    case "349":
+                        explanation = "Depth, thickness, height, or third dimension in yards";
                         units = "yd";
                         break;
                     default:
@@ -73,7 +73,7 @@
 
 
 
-                return "AI " + ai + " = Trade measures\r\r" +
+                return "AI " + ai + " = Logistic measures\r\r" +
                        "Fixed length Numeric data of 6 elements\r\r" +
                        "\t" + explanation + " = " + data + units + "\r";
             }
