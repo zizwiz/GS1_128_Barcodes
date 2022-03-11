@@ -276,8 +276,8 @@ namespace GS1_128_Barcodes
                 case "AI 367n: VOLUME (i3), log": txtbx_data_input.Text = "(3674)009876"; return;
                 case "AI 368n: VOLUME (f3), log": txtbx_data_input.Text = "(3680)236586"; return;
                 case "AI 369n: VOLUME (y3), log": txtbx_data_input.Text = "(3692)864975"; return;
-                case "AI 37: COUNT": txtbx_data_input.Text = ""; return;
-                case "AI 390n: AMOUNT": txtbx_data_input.Text = ""; return;
+                case "AI 37: COUNT": txtbx_data_input.Text = "(37)19364730"; return;
+                case "AI 390n: AMOUNT": txtbx_data_input.Text = "(3902)1295"; return;
                 case "AI 391n: AMOUNT": txtbx_data_input.Text = ""; return;
                 case "AI 392n: PRICE": txtbx_data_input.Text = ""; return;
                 case "AI 393n: PRICE": txtbx_data_input.Text = ""; return;

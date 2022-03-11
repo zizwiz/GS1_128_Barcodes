@@ -97,7 +97,12 @@
                 case "36nn": //TRADE MEASURE
                     rchtxtbx_output.AppendText(AI_4.decipher_AI36nn(data) + "\r");
                     break;
-
+                case "37": //COUNT
+                    rchtxtbx_output.AppendText(AI_2.decipher_AI37(data) + "\r");
+                    break;
+                case "390n": //AMOUNT
+                    rchtxtbx_output.AppendText(AI_4.decipher_AI390n(data) + "\r");
+                    break;
 
 
 

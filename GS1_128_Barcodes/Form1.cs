@@ -259,7 +259,7 @@ namespace GS1_128_Barcodes
                         _data = ai + _data;
                         ai = "32nn";
                     }
-                    else if ((_ai >= 330) && (_ai <= 336))
+                    else if ((_ai >= 330) && (_ai <= 337))
                     {
                         _data = ai + _data;
                         ai = "33nn";
@@ -278,6 +278,11 @@ namespace GS1_128_Barcodes
                     {
                         _data = ai + _data;
                         ai = "36nn";
+                    }
+                    else if (_ai == 390)
+                    {
+                        _data = ai + _data;
+                        ai = "390n";
                     }
 
                     DecipherData(ai,_data);

@@ -74,7 +74,7 @@
 
 
 
-                return "AI " + ai + " = "+ type +"\r\r" +
+                return "AI " + ai + "n = "+ type +"\r\r" +
                        "Fixed length Numeric data of 6 elements\r\r" +
                        "\t" + explanation + " = " + data + units + "\r";
             }

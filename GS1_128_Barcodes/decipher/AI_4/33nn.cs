@@ -12,6 +12,7 @@
             if ((CheckData.IsItNumber(data)) && (data.Length == 10)) //data includes the ai hence 10 and not 6
             {
                 string ai = data.Substring(0, 3);
+                string type = "";
 
                 int _ctr = int.Parse(data.Substring(3, 1));
 
@@ -29,30 +30,42 @@
                     case "330":
                         explanation = "Logistic weight in kilograms";
                         units = "kg";
+                        type = "Logistic measures";
                         break;
                     case "331":
                         explanation = "Length or first dimension in metres";
                         units = "m";
+                        type = "Logistic measures";
                         break;
                     case "332":
                         explanation = "Width, diameter, or second dimension in metres";
                         units = "m";
+                        type = "Logistic measures";
                         break;
                     case "333":
                         explanation = "Depth, thickness, height, or third dimension in metres";
                         units = "m";
+                        type = "Logistic measures";
                         break;
                     case "334":
                         explanation = "Area Square in metres";
                         units = "m²";
+                        type = "Logistic measures";
                         break;
                     case "335":
                         explanation = "Logistic volume in litres";
                         units = "l";
+                        type = "Logistic measures";
                         break;
                     case "336":
                         explanation = "Logistic volume in cubic metres";
                         units = "m³";
+                        type = "Logistic measures";
+                        break;
+                    case "337":
+                        explanation = "Kilograms per square metre";
+                        units = "kg m²";
+                        type = "Kilograms per square metre";
                         break;
                     default:
                         explanation = "Not known";
@@ -61,7 +74,7 @@
 
 
 
-                return "AI " + ai + " = Logistic measures\r\r" +
+                return "AI " + ai + "n = "+ type +"\r\r" +
                        "Fixed length Numeric data of 6 elements\r\r" +
                        "\t" + explanation + " = " + data + units + "\r";
             }

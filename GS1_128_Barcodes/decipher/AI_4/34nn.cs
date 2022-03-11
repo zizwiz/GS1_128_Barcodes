@@ -73,7 +73,7 @@
 
 
 
-                return "AI " + ai + " = Logistic measures\r\r" +
+                return "AI " + ai + "n = Logistic measures\r\r" +
                        "Fixed length Numeric data of 6 elements\r\r" +
                        "\t" + explanation + " = " + data + units + "\r";
             }

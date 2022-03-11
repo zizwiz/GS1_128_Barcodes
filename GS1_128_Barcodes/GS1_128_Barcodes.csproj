@@ -70,6 +70,7 @@
     <Compile Include="decipher\AI_2\21.cs" />
     <Compile Include="decipher\AI_2\22.cs" />
     <Compile Include="decipher\AI_2\30.cs" />
+    <Compile Include="decipher\AI_2\37.cs" />
     <Compile Include="decipher\AI_3\235.cs" />
     <Compile Include="decipher\AI_3\240.cs" />
     <Compile Include="decipher\AI_3\241.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="decipher\AI_4\34nn.cs" />
     <Compile Include="decipher\AI_4\35nn.cs" />
     <Compile Include="decipher\AI_4\36nn.cs" />
+    <Compile Include="decipher\AI_4\390n.cs" />
     <Compile Include="decipher\decipher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +131,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="128.ico" />
+    <Content Include="data\ISO_4217.xml" />
     <Content Include="images\128.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
