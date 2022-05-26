@@ -116,6 +116,16 @@ namespace GS1_128_Barcodes
 
         }
 
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txtbx_data_input.Text = "";
+            cmbobx_ai_test_data.SelectedIndex = 0;
+            rchtxtbx_output.Clear();
+            label4.Text = "";
+            txtbx_bar_width.Text = "1";
+            picbx_output.Image = null;
+        }
+
         private void btn_makeBigger_Click(object sender, EventArgs e)
         {
             int BarSize = int.Parse(txtbx_bar_width.Text) + 1;
@@ -294,6 +304,6 @@ namespace GS1_128_Barcodes
             }
         }
 
-       
+        
     }
 }

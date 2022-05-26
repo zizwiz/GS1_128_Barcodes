@@ -266,6 +266,7 @@ namespace GS1_128_Barcodes
             this.btn_clear.Size = new System.Drawing.Size(120, 42);
             this.btn_clear.TabIndex = 9;
             this.btn_clear.Text = "Clear";
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // tableLayoutPanel3
             // 
